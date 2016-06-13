@@ -20,6 +20,9 @@ files	= [
 	#{'copy': True,  'exec': False, 'file': 'iondb_style.cfg'},
 ]
 
+# Initialize the hooks directory, if it does not already exist
+os.makedirs(gh, exist_ok=True)
+
 for f in files:
 	if f['copy']:
 		os.system("cp " + os.path.join(df, f['file']) + " " + os.path.join(gh, f['file']))
