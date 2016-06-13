@@ -12,7 +12,8 @@ gh	= os.path.join(pwd, '.git', 'hooks')
 files	= [
 	{'copy': False, 'exec': True,  'file': 'pre-commit-uncrustify',
 	 'replacements': {
-		'%CONFIG_FILE%': os.path.join(df, 'iondb_style.cfg')
+		'%CONFIG_FILE%': os.path.join(df, 'iondb_style.cfg'),
+		'%SPACETOTAB_SCRIPT%': os.path.join(df, 'scripts', 'spacestotabs.py'),
 	 }
 	},
 	{'copy': True,  'exec': True,  'file': 'pre-commit'},
