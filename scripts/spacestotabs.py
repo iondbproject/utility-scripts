@@ -23,8 +23,10 @@ if len(sys.argv) > 1:
 		eprint("Could not read file: " + sys.argv[1])
 		sys.exit()
 else:
-	eprint("No file specified")
-	sys.exit()
+	# If we're given no input file, then just read from stdin.
+	string = sys.stdin.read()
+	# eprint("No file specified")
+	# sys.exit()
 
 def bound_in(bound, bounds):
 	for check in bounds:
