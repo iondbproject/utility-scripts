@@ -10,7 +10,7 @@ for filename in glob.glob("test_*"):
 		mode = st.st_mode
 		if mode & executable:
 			#print(filename,oct(mode))
-			command	= filename
+			command	= "./" + filename
 			output	= subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)\
 					.stdout.read()
 			print(output)
