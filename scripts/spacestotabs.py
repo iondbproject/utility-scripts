@@ -59,4 +59,4 @@ if len(sys.argv) > 2:
 		eprint("Could not write to file: " + sys.argv[1])
 		sys.exit()
 else:
-	print(newstr)
+	print(newstr, end="")
