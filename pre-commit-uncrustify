@@ -48,7 +48,7 @@ UNCRUSTIFY="uncrustify"
 CONFIG="%CONFIG_FILE%"
 
 # set python path or executable
-PYTHON="python3"
+PYTHON="python"
 
 # set spacestotabs script location
 SPACETOTABS="%SPACETOTAB_SCRIPT%"

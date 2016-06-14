@@ -22,7 +22,11 @@ files	= [
 ]
 
 # Initialize the hooks directory, if it does not already exist
-os.makedirs(gh, exist_ok=True)
+try:
+	os.makedirs(gh)
+except OSError:
+	# Directories exist
+	print("Hooks directory already existed, didn't create")
 
 for f in files:
 	if f['copy']:
