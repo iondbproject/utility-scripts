@@ -12,10 +12,11 @@ filexts = [
 ]
 
 parser = argparse.ArgumentParser()
+parser.add_argument("dir", help="Directory target to format.")
 parser.add_argument("--dry-run", help="Show what files would be formatted without performing any modifications.", action="store_true")
 args = parser.parse_args()
 
-for root, dirs, files in  os.walk("."):
+for root, dirs, files in  os.walk(args.dir):
 	for file_name in files:
 		_, ext = os.path.splitext(file_name)
 		if ext not in filexts:
