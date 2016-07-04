@@ -9,6 +9,7 @@ filexts = [
 	'.cpp',
 	'.h',
 	'.hpp',
+	'.ino',
 ]
 
 parser = argparse.ArgumentParser()
