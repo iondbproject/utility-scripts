@@ -2,4 +2,7 @@
 
 codes=($(grep -E "^\s+err_" src/key_value/kv_system.h | sed -E "s/,//" | awk '{ print $1 }'))
 
-echo "$1 = ${codes[$1]}"
+for code in "$@";
+do
+	echo "$code = ${codes[$code]}";
+done
